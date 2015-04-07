@@ -1,0 +1,10 @@
+---
+applications:
+- name: phppgadmin
+  host: myphppgadmin
+  memory: 128M 
+  instances: 1
+  domain: cfapps.io
+  path: .
+  services:
+  - pgsql-db
