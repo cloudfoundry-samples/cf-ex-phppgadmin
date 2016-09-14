@@ -1,10 +1,8 @@
 ---
 applications:
-- name: phppgadmin
-  host: myphppgadmin
-  memory: 128M 
+- name: cf-ex-phppgadmin
+  memory: 128M
   instances: 1
-  domain: cfapps.io
   path: .
   services:
-  - pgsql-db
+  - pgsql
