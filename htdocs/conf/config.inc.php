@@ -38,7 +38,7 @@
      */
     for ($i = 0; $i < count($pgsql_services); $i++) {
         // parse individual config from uri
-        preg_match('|^postgres://(.*):(.*)@(.*):(.*)/(.*)$|',
+        preg_match('/^(?:postgres|postgresql)\:\/\/(.*):(.*)@(.*):(.*)\/(.*)$/',
                    $pgsql_services[$i]['credentials']['uri'], $db);
         if (count($db) == 6) {
             // configure server
