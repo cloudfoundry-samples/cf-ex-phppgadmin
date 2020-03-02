@@ -35,7 +35,7 @@ This is an out-of-the-box implementation of PHPPgAdmin.  It's an example how com
 
   If you do not name your service `pgsql` then you need to edit `manifest.yml` and change the service name to match the name of your service.
 
-1. Edit `htdocs/conf/config.inc.php`. Add this block of code at the top of the file.
+1. Edit `htdocs/conf/config.inc.php`. Add this block of code at the top of the file. Then delete the block that starts with the comment `An example server.` and runs just up to the block that starts with `Groups definition`. This is deleting the sample configuration.
 
   ```php
       /*
@@ -85,6 +85,8 @@ This is an out-of-the-box implementation of PHPPgAdmin.  It's an example how com
         }
     }
   ```
+
+1. Edit `htdocs/composer.json` and change `"type": "Application"` to `"type": "application"`. This is a problem with the upstream project and it will cause Composer errors. It should be lower case.
 
 1. Push it to CloudFoundry.
 
