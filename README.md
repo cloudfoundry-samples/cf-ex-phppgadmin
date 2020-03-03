@@ -86,7 +86,7 @@ This is an out-of-the-box implementation of PHPPgAdmin.  It's an example how com
         }
     ```
 
-1. Edit `htdocs/composer.json` and change `"type": "Application"` to `"type": "application"`. This is a problem with the upstream project and it will cause Composer errors. It should be lower case.
+1. Delete `htdocs/composer.json`. It is not set up correctly and it is not being used to install anything. If you do not, it will cause Composer to complain and fail.
 
 1. Push it to CloudFoundry.
 
